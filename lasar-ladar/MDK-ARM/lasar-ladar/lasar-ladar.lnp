@@ -1,0 +1,26 @@
+--cpu=Cortex-M4.fp.sp
+"lasar-ladar\startup_stm32f401xc.o"
+"lasar-ladar\main.o"
+"lasar-ladar\gpio.o"
+"lasar-ladar\stm32f4xx_it.o"
+"lasar-ladar\stm32f4xx_hal_msp.o"
+"lasar-ladar\stm32f4xx_hal_tim.o"
+"lasar-ladar\stm32f4xx_hal_tim_ex.o"
+"lasar-ladar\stm32f4xx_hal_rcc.o"
+"lasar-ladar\stm32f4xx_hal_rcc_ex.o"
+"lasar-ladar\stm32f4xx_hal_flash.o"
+"lasar-ladar\stm32f4xx_hal_flash_ex.o"
+"lasar-ladar\stm32f4xx_hal_flash_ramfunc.o"
+"lasar-ladar\stm32f4xx_hal_gpio.o"
+"lasar-ladar\stm32f4xx_hal_dma_ex.o"
+"lasar-ladar\stm32f4xx_hal_dma.o"
+"lasar-ladar\stm32f4xx_hal_pwr.o"
+"lasar-ladar\stm32f4xx_hal_pwr_ex.o"
+"lasar-ladar\stm32f4xx_hal_cortex.o"
+"lasar-ladar\stm32f4xx_hal.o"
+"lasar-ladar\stm32f4xx_hal_exti.o"
+"lasar-ladar\system_stm32f4xx.o"
+--strict --scatter "lasar-ladar\lasar-ladar.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "lasar-ladar.map" -o lasar-ladar\lasar-ladar.axf
