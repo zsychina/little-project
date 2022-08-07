@@ -1,5 +1,6 @@
 #include "ctrl.h"
 #include "ls53l1m.h"
+#include "oled.h"
 
 #define BUF_LEN 11
 
@@ -24,6 +25,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     if(tim1clk%10==1) //100Hz
     { 
       request_distance();
+    }
+    if(tim1clk%200==1) //5Hz
+    {
+      OLED_ShowString(0,0,"designed by zsy",8);
+      OLED_ShowString(0,2,"under developing...",8);
     }
   }
 }

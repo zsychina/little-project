@@ -35,3 +35,4 @@ lasar-ladar\ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lasar-ladar\ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lasar-ladar\ctrl.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lasar-ladar\ctrl.o: ..\HARDWARE\ls53l1m.h
+lasar-ladar\ctrl.o: ..\HARDWARE\oled.h

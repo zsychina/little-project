@@ -26,7 +26,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "oled.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,10 +97,13 @@ int main(void)
 	HAL_TIM_Base_Start(&htim11);
   HAL_UART_Receive_IT(&huart1,&ReceiveByte,1);
   __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+  
+  OLED_Init();	
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
     /* USER CODE END WHILE */

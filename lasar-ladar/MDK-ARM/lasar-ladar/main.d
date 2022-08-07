@@ -37,3 +37,4 @@ lasar-ladar\main.o: ../Core/Inc/i2c.h
 lasar-ladar\main.o: ../Core/Inc/tim.h
 lasar-ladar\main.o: ../Core/Inc/usart.h
 lasar-ladar\main.o: ../Core/Inc/gpio.h
+lasar-ladar\main.o: ..\HARDWARE\oled.h

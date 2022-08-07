@@ -16,29 +16,69 @@ void oled_write_byte(uint8_t ctrl, uint8_t data)
 
 void OLED_Init(void)
 {
-	oled_write_byte(OLED_CMD,0xAE);//¹Ø±ÕÏÔÊ¾
-	oled_write_byte(OLED_CMD,0x40);//---set low column address
-	oled_write_byte(OLED_CMD,0xB0);//---set high column address
-	oled_write_byte(OLED_CMD,0xC8);//-not offset
-	oled_write_byte(OLED_CMD,0x81);//ÉèÖÃ¶Ô±È¶È
-	oled_write_byte(OLED_CMD,0xff);
-	oled_write_byte(OLED_CMD,0xa1);//¶ÎÖØ¶¨ÏòÉèÖÃ
-	oled_write_byte(OLED_CMD,0xa6);//
-	oled_write_byte(OLED_CMD,0xa8);//ÉèÖÃÇý¶¯Â·Êý
-	oled_write_byte(OLED_CMD,0x1f);
-	oled_write_byte(OLED_CMD,0xd3);
-	oled_write_byte(OLED_CMD,0x00);
-	oled_write_byte(OLED_CMD,0xd5);
-	oled_write_byte(OLED_CMD,0xf0);
-	oled_write_byte(OLED_CMD,0xd9);
-	oled_write_byte(OLED_CMD,0x22);
-	oled_write_byte(OLED_CMD,0xda);
-	oled_write_byte(OLED_CMD,0x02);
-	oled_write_byte(OLED_CMD,0xdb);
-	oled_write_byte(OLED_CMD,0x49);
-	oled_write_byte(OLED_CMD,0x8d);
-	oled_write_byte(OLED_CMD,0x14);
-	oled_write_byte(OLED_CMD,0xaf);
+	//0.91
+	// oled_write_byte(OLED_CMD,0xAE);//ï¿½Ø±ï¿½ï¿½ï¿½Ê¾
+	// oled_write_byte(OLED_CMD,0x40);//---set low column address
+	// oled_write_byte(OLED_CMD,0xB0);//---set high column address
+	// oled_write_byte(OLED_CMD,0xC8);//-not offset
+	// oled_write_byte(OLED_CMD,0x81);//ï¿½ï¿½ï¿½Ã¶Ô±È¶ï¿½
+	// oled_write_byte(OLED_CMD,0xff);
+	// oled_write_byte(OLED_CMD,0xa1);//ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// oled_write_byte(OLED_CMD,0xa6);//
+	// oled_write_byte(OLED_CMD,0xa8);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½
+	// oled_write_byte(OLED_CMD,0x1f);
+	// oled_write_byte(OLED_CMD,0xd3);
+	// oled_write_byte(OLED_CMD,0x00);
+	// oled_write_byte(OLED_CMD,0xd5);
+	// oled_write_byte(OLED_CMD,0xf0);
+	// oled_write_byte(OLED_CMD,0xd9);
+	// oled_write_byte(OLED_CMD,0x22);
+	// oled_write_byte(OLED_CMD,0xda);
+	// oled_write_byte(OLED_CMD,0x02);
+	// oled_write_byte(OLED_CMD,0xdb);
+	// oled_write_byte(OLED_CMD,0x49);
+	// oled_write_byte(OLED_CMD,0x8d);
+	// oled_write_byte(OLED_CMD,0x14);
+	// oled_write_byte(OLED_CMD,0xaf);
+
+	//0.96
+    oled_write_byte(OLED_CMD,0xAE);//--display off
+	oled_write_byte(OLED_CMD,0x00);//---set low column address
+	oled_write_byte(OLED_CMD,0x10);//---set high column address
+	oled_write_byte(OLED_CMD,0x40);//--set start line address  
+	oled_write_byte(OLED_CMD,0xB0);//--set page address
+	oled_write_byte(OLED_CMD,0x81); // contract control
+	oled_write_byte(OLED_CMD,0xFF);//--128   
+	oled_write_byte(OLED_CMD,0xA1);//set segment remap 
+	oled_write_byte(OLED_CMD,0xA6);//--normal / reverse
+	oled_write_byte(OLED_CMD,0xA8);//--set multiplex ratio(1 to 64)
+	oled_write_byte(OLED_CMD,0x3F);//--1/32 duty
+	oled_write_byte(OLED_CMD,0xC8);//Com scan direction
+	oled_write_byte(OLED_CMD,0xD3);//-set display offset
+	oled_write_byte(OLED_CMD,0x00);//
+	
+	oled_write_byte(OLED_CMD,0xD5);//set osc division
+	oled_write_byte(OLED_CMD,0x80);//
+	
+	oled_write_byte(OLED_CMD,0xD8);//set area color mode off
+	oled_write_byte(OLED_CMD,0x05);//
+	
+	oled_write_byte(OLED_CMD,0xD9);//Set Pre-Charge Period
+	oled_write_byte(OLED_CMD,0xF1);//
+	
+	oled_write_byte(OLED_CMD,0xDA);//set com pin configuartion
+	oled_write_byte(OLED_CMD,0x12);//
+	
+	oled_write_byte(OLED_CMD,0xDB);//set Vcomh
+	oled_write_byte(OLED_CMD,0x30);//
+	
+	oled_write_byte(OLED_CMD,0x8D);//set charge pump enable
+	oled_write_byte(OLED_CMD,0x14);//
+	
+	oled_write_byte(OLED_CMD,0xAF);//--turn on oled panel
+    
+
+
 	OLED_Clear();	
 }
 
@@ -133,13 +173,13 @@ uint32_t oled_pow(uint8_t m, uint8_t n)
 }
 
 
-//ÏÔÊ¾2¸öÊý×Ö
-//x,y :Æðµã×ø±ê	 
-//len :Êý×ÖµÄÎ»Êý
-//size:×ÖÌå´óÐ¡
-//mode:Ä£Ê½	0,Ìî³äÄ£Ê½;1,µþ¼ÓÄ£Ê½
-//num:ÊýÖµ(0~4294967295);	 		  
-void OLED_ShowNum(uint8_t x, uint8_t y, uint32_t num, uint8_t len, uint8_t size2)
+//ï¿½ï¿½Ê¾2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//x,y :ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½	 
+//len :ï¿½ï¿½ï¿½Öµï¿½Î»ï¿½ï¿½
+//size:ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡
+//mode:Ä£Ê½	0,ï¿½ï¿½ï¿½Ä£Ê½;1,ï¿½ï¿½ï¿½ï¿½Ä£Ê½
+//num:ï¿½ï¿½Öµ(0~4294967295);	 		  
+void OLED_ShowNum(uint8_t x, uint8_t y, int32_t num, uint8_t len, uint8_t size2)
 {
 	uint8_t t,temp,enshow=0;
 	for(t=0;t<len;t++)
@@ -149,12 +189,12 @@ void OLED_ShowNum(uint8_t x, uint8_t y, uint32_t num, uint8_t len, uint8_t size2
 		{
 			if(temp==0)
 			{
-				OLED_ShowChar(x+(size2/2)*t,y,' ',size2);
+				OLED_ShowChar(x+(size2/2)*(t),y,' ',size2);
 				continue;
 			}else enshow=1; 
 		 	 
 		}
-	 	OLED_ShowChar(x+(size2/2)*t,y,temp+'0',size2); 
+	 	OLED_ShowChar(x+(size2/2)*(t),y,temp+'0',size2); 
 	}	
 	
 }
@@ -191,7 +231,23 @@ void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no)
 	}					
 }
 
+int32_t getAbs(int32_t num)
+{
+	if(num<0)return -num;
+	else return num;
+}
 
+
+void OLED_ShowNum2(uint8_t x, uint8_t y, int32_t num, uint8_t len, uint8_t size)
+{
+  if(num<0)
+	{
+		OLED_ShowChar(x,y,'-',size);
+	}else OLED_ShowChar(x,y,' ',size);
+
+	OLED_ShowNum(x+8, y, getAbs(num), len, size);
+	
+}
 
 
 

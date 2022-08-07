@@ -1,5 +1,6 @@
 lasar-ladar\oled.o: ..\HARDWARE\oled.c
 lasar-ladar\oled.o: ..\HARDWARE\oled.h
+lasar-ladar\oled.o: ../Core/Inc/main.h
 lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 lasar-ladar\oled.o: ../Core/Inc/stm32f4xx_hal_conf.h
 lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
