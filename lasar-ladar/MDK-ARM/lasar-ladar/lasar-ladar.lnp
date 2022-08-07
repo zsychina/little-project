@@ -2,6 +2,8 @@
 "lasar-ladar\startup_stm32f401xc.o"
 "lasar-ladar\main.o"
 "lasar-ladar\gpio.o"
+"lasar-ladar\tim.o"
+"lasar-ladar\usart.o"
 "lasar-ladar\stm32f4xx_it.o"
 "lasar-ladar\stm32f4xx_hal_msp.o"
 "lasar-ladar\stm32f4xx_hal_tim.o"
@@ -19,7 +21,11 @@
 "lasar-ladar\stm32f4xx_hal_cortex.o"
 "lasar-ladar\stm32f4xx_hal.o"
 "lasar-ladar\stm32f4xx_hal_exti.o"
+"lasar-ladar\stm32f4xx_hal_uart.o"
 "lasar-ladar\system_stm32f4xx.o"
+"lasar-ladar\ls53l1m.o"
+"lasar-ladar\delay.o"
+"lasar-ladar\ctrl.o"
 --strict --scatter "lasar-ladar\lasar-ladar.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
