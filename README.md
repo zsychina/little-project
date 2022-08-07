@@ -28,3 +28,4 @@
 ## 引脚分配
 
 * USART1-PA9(TX)、PA10(RX)：接测距模块RX、TX
+* IIC1-PB6(SCL)、PB7(SDA)：接OLED的SCL、SDA
