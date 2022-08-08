@@ -5,5 +5,6 @@
 
 extern TIM_HandleTypeDef htim1;
 extern UART_HandleTypeDef huart1;
+extern TIM_HandleTypeDef htim10;
 
 #endif

@@ -27,5 +27,11 @@
 
 ## 引脚分配
 
-* USART1-PA9(TX)、PA10(RX)：接测距模块RX、TX
-* IIC1-PB6(SCL)、PB7(SDA)：接OLED的SCL、SDA
+* USART1-**PA9**(TX)、**PA10**(RX)：接测距模块**RX**、**TX**
+* IIC1-**PB6**(SCL)、**PB7**(SDA)：接OLED的**SCL**、**SDA**
+* TIM10CH1-**PB8**(PWM)：接舵机的**信号线**
+
+## 其他资料
+
+![舵机占空比](./img/pwm.png)  
+![传感器引脚](./img/sensor.png)  

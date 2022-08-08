@@ -92,8 +92,11 @@ int main(void)
   MX_TIM1_Init();
   MX_USART1_UART_Init();
   MX_I2C1_Init();
+  MX_TIM10_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim1);
+  HAL_TIM_Base_Start(&htim10);
+  HAL_TIM_PWM_Start(&htim10,TIM_CHANNEL_1);
 	HAL_TIM_Base_Start(&htim11);
   HAL_UART_Receive_IT(&huart1,&ReceiveByte,1);
   __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
@@ -103,7 +106,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  
+  //__HAL_TIM_SetCompare(&htim10,TIM_CHANNEL_1,2000);  // 2000/20000 = 10%
   while (1)
   {
     /* USER CODE END WHILE */

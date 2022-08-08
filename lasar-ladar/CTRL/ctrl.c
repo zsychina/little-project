@@ -37,41 +37,41 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	if(huart==&huart1)
-	{
-			ReceiveBuff[ReceiveCnt]=ReceiveByte;
-			ReceiveCnt++;  //save data into ReceiveBuff
-			if(ReceiveCnt==BUF_LEN)ReceiveCnt=0;
-			HAL_UART_Receive_IT(&huart1,&ReceiveByte,1);
-		
-	}
-	
+    if(huart==&huart1)
+    {
+            ReceiveBuff[ReceiveCnt]=ReceiveByte;
+            ReceiveCnt++;  //save data into ReceiveBuff
+            if(ReceiveCnt==BUF_LEN)ReceiveCnt=0;
+            HAL_UART_Receive_IT(&huart1,&ReceiveByte,1);
+        
+    }
+    
 }
 
 
 void UART_IDLECallBack(UART_HandleTypeDef *huart)
 {
-	if(huart==&huart1)
-	{
-		if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_IDLE)!=RESET)  // IDLE interrupt happened
-		{
-			__HAL_UART_CLEAR_IDLEFLAG(&huart1); //clear IDLE flag
-			
-			// respond (do something)
-			//HAL_UART_Transmit(&huart1,ReceiveBuff,BUF_LEN,0xfff);
+    if(huart==&huart1)
+    {
+        if(__HAL_UART_GET_FLAG(&huart1,UART_FLAG_IDLE)!=RESET)  // IDLE interrupt happened
+        {
+            __HAL_UART_CLEAR_IDLEFLAG(&huart1); //clear IDLE flag
+            
+            // respond (do something)
+            //HAL_UART_Transmit(&huart1,ReceiveBuff,BUF_LEN,0xfff);
       
-			distance=ReceiveBuff[8]<<8|ReceiveBuff[9];
+            distance=ReceiveBuff[8]<<8|ReceiveBuff[9];
       
       
-			// clear the buff afterwards
+            // clear the buff afterwards
       ReceiveCnt=0;
-			for(uint8_t i=0;i<BUF_LEN;i++)  //clear buff
-			{
-				ReceiveBuff[i]=0;		
-			}
-			
-		}		
-	}
+            for(uint8_t i=0;i<BUF_LEN;i++)  //clear buff
+            {
+                ReceiveBuff[i]=0;		
+            }
+            
+        }		
+    }
 }
 
 
