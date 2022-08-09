@@ -1,6 +1,5 @@
 #include "ctrl.h"
-#include "ls53l1m.h"
-#include "oled.h"
+
 
 #define BUF_LEN 11
 
@@ -13,7 +12,7 @@ uint8_t ReceiveBuff[BUF_LEN]={0};
 uint8_t ReceiveCnt=0;
 
 uint16_t angle; // theortically 0~180
-uint16_t distance=0; // millimeter
+uint16_t distance; // millimeter
 uint16_t result[100][2]; // [angle][distance]
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
@@ -42,8 +41,8 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
     if(tim1clk%200==1) //5Hz
     {
-      OLED_ShowString(0,0,"designed by zsy",8);
-      OLED_ShowString(0,2,"under developing...",8);
+
+      OLED_Refresh_Gram();
     }
     
   }

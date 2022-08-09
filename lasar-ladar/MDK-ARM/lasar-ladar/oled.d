@@ -34,4 +34,7 @@ lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 lasar-ladar\oled.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+lasar-ladar\oled.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+lasar-ladar\oled.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 lasar-ladar\oled.o: ..\HARDWARE\oledfont.h
+lasar-ladar\oled.o: ../Core/Inc/i2c.h

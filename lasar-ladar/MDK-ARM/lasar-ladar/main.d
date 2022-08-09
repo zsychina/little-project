@@ -38,3 +38,6 @@ lasar-ladar\main.o: ../Core/Inc/tim.h
 lasar-ladar\main.o: ../Core/Inc/usart.h
 lasar-ladar\main.o: ../Core/Inc/gpio.h
 lasar-ladar\main.o: ..\HARDWARE\oled.h
+lasar-ladar\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+lasar-ladar\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+lasar-ladar\main.o: ..\CTRL\draw.h

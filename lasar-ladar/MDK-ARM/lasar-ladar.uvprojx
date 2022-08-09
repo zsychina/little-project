@@ -888,6 +888,18 @@
         </Group>
         <Group>
           <GroupName>BSP</GroupName>
+          <Files>
+            <File>
+              <FileName>print.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\BSP\print.c</FilePath>
+            </File>
+            <File>
+              <FileName>print.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\BSP\print.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>CTRL</GroupName>
@@ -901,6 +913,16 @@
               <FileName>ctrl.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\CTRL\ctrl.h</FilePath>
+            </File>
+            <File>
+              <FileName>draw.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CTRL\draw.c</FilePath>
+            </File>
+            <File>
+              <FileName>draw.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\CTRL\draw.h</FilePath>
             </File>
           </Files>
         </Group>

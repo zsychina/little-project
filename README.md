@@ -31,8 +31,9 @@
 * IIC1-**PB6**(SCL)、**PB7**(SDA)：接OLED的**SCL**、**SDA**
 * TIM10CH1-**PB8**(PWM)：接舵机的**信号线**
 
-## 其他资料
+## 参考资料
 
 ![舵机占空比](./img/pwm.png)  
 ![传感器引脚](./img/sensor.png)  
 ![舵机引脚](./img/steering_engine.png)
+![OLED](./img/oled.png)
