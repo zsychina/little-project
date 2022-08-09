@@ -6,7 +6,6 @@
 
 extern UART_HandleTypeDef huart1;
 
-extern void sensor_init(void);
 extern void request_distance(void);
 
 

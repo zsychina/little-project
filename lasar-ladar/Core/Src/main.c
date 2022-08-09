@@ -46,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-extern uint8_t ReceiveByte;;
+extern uint8_t ReceiveByte;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/

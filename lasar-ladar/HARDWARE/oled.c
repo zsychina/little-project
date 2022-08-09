@@ -16,33 +16,8 @@ void oled_write_byte(uint8_t ctrl, uint8_t data)
 
 void OLED_Init(void)
 {
-	//0.91
-	// oled_write_byte(OLED_CMD,0xAE);//�ر���ʾ
-	// oled_write_byte(OLED_CMD,0x40);//---set low column address
-	// oled_write_byte(OLED_CMD,0xB0);//---set high column address
-	// oled_write_byte(OLED_CMD,0xC8);//-not offset
-	// oled_write_byte(OLED_CMD,0x81);//���öԱȶ�
-	// oled_write_byte(OLED_CMD,0xff);
-	// oled_write_byte(OLED_CMD,0xa1);//���ض�������
-	// oled_write_byte(OLED_CMD,0xa6);//
-	// oled_write_byte(OLED_CMD,0xa8);//��������·��
-	// oled_write_byte(OLED_CMD,0x1f);
-	// oled_write_byte(OLED_CMD,0xd3);
-	// oled_write_byte(OLED_CMD,0x00);
-	// oled_write_byte(OLED_CMD,0xd5);
-	// oled_write_byte(OLED_CMD,0xf0);
-	// oled_write_byte(OLED_CMD,0xd9);
-	// oled_write_byte(OLED_CMD,0x22);
-	// oled_write_byte(OLED_CMD,0xda);
-	// oled_write_byte(OLED_CMD,0x02);
-	// oled_write_byte(OLED_CMD,0xdb);
-	// oled_write_byte(OLED_CMD,0x49);
-	// oled_write_byte(OLED_CMD,0x8d);
-	// oled_write_byte(OLED_CMD,0x14);
-	// oled_write_byte(OLED_CMD,0xaf);
-
 	//0.96
-    oled_write_byte(OLED_CMD,0xAE);//--display off
+  oled_write_byte(OLED_CMD,0xAE);//--display off
 	oled_write_byte(OLED_CMD,0x00);//---set low column address
 	oled_write_byte(OLED_CMD,0x10);//---set high column address
 	oled_write_byte(OLED_CMD,0x40);//--set start line address  
