@@ -38,3 +38,5 @@ lasar-ladar\ctrl.o: ..\HARDWARE\ls53l1m.h
 lasar-ladar\ctrl.o: ..\HARDWARE\oled.h
 lasar-ladar\ctrl.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 lasar-ladar\ctrl.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+lasar-ladar\ctrl.o: ..\CTRL\draw.h
+lasar-ladar\ctrl.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

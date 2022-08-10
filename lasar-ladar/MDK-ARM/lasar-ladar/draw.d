@@ -37,3 +37,4 @@ lasar-ladar\draw.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 lasar-ladar\draw.o: ..\HARDWARE\oled.h
 lasar-ladar\draw.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 lasar-ladar\draw.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+lasar-ladar\draw.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

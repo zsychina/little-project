@@ -4,6 +4,7 @@
 #include "main.h"
 #include "ls53l1m.h"
 #include "oled.h"
+#include "draw.h"
 
 extern TIM_HandleTypeDef htim1;
 extern UART_HandleTypeDef huart1;

@@ -1,7 +1,7 @@
 Dependencies for Project 'lasar-ladar', Target 'lasar-ladar': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
 F (startup_stm32f401xc.s)(0x62F0E04F)(--cpu Cortex-M4.fp.sp -g --apcs=interwork -I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "STM32F401xC SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32f401xc.lst --xref -o lasar-ladar\startup_stm32f401xc.o --depend lasar-ladar\startup_stm32f401xc.d)
-F (../Core/Src/main.c)(0x62F27197)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\main.o --omf_browse lasar-ladar\main.crf --depend lasar-ladar\main.d)
+F (../Core/Src/main.c)(0x62F39522)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\main.o --omf_browse lasar-ladar\main.crf --depend lasar-ladar\main.d)
 I (../Core/Inc/main.h)(0x62F0E04D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x61729BC8)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x62F0E04D)
@@ -42,7 +42,8 @@ I (../Core/Inc/gpio.h)(0x62F0E04B)
 I (..\HARDWARE\oled.h)(0x6007BDD4)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E8E2EB2)
-I (..\CTRL\draw.h)(0x62F270E5)
+I (..\CTRL\draw.h)(0x62F3B8CE)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
 F (../Core/Src/gpio.c)(0x62F0E04B)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\gpio.o --omf_browse lasar-ladar\gpio.crf --depend lasar-ladar\gpio.d)
 I (../Core/Inc/gpio.h)(0x62F0E04B)
 I (../Core/Inc/main.h)(0x62F0E04D)
@@ -1032,8 +1033,8 @@ I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E8E2EB2)
 I (../Core/Inc/usart.h)(0x62F0E04C)
 F (..\BSP\print.h)(0x6274C528)()
-F (..\CTRL\ctrl.c)(0x62F265E9)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\ctrl.o --omf_browse lasar-ladar\ctrl.crf --depend lasar-ladar\ctrl.d)
-I (..\CTRL\ctrl.h)(0x62F2612E)
+F (..\CTRL\ctrl.c)(0x62F3B980)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\ctrl.o --omf_browse lasar-ladar\ctrl.crf --depend lasar-ladar\ctrl.d)
+I (..\CTRL\ctrl.h)(0x62F39478)
 I (../Core/Inc/main.h)(0x62F0E04D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x61729BC8)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x62F0E04D)
@@ -1071,9 +1072,11 @@ I (..\HARDWARE\ls53l1m.h)(0x62F20062)
 I (..\HARDWARE\oled.h)(0x6007BDD4)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E8E2EB2)
-F (..\CTRL\ctrl.h)(0x62F2612E)()
-F (..\CTRL\draw.c)(0x62F2747C)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\draw.o --omf_browse lasar-ladar\draw.crf --depend lasar-ladar\draw.d)
-I (..\CTRL\draw.h)(0x62F270E5)
+I (..\CTRL\draw.h)(0x62F3B8CE)
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\CTRL\ctrl.h)(0x62F39478)()
+F (..\CTRL\draw.c)(0x62F3B8CE)(--c99 -c --cpu Cortex-M4.fp.sp -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ..\BSP -I ..\CTRL -I ..\MSP -I ..\HARDWARE-I.\RTE\_lasar-ladar-IE:\Keil_v5\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IE:\Keil_v5\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F401xC -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F401xC-o lasar-ladar\draw.o --omf_browse lasar-ladar\draw.crf --depend lasar-ladar\draw.d)
+I (..\CTRL\draw.h)(0x62F3B8CE)
 I (../Core/Inc/main.h)(0x62F0E04D)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x61729BC8)
 I (../Core/Inc/stm32f4xx_hal_conf.h)(0x62F0E04D)
@@ -1110,4 +1113,5 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x61729BC8)
 I (..\HARDWARE\oled.h)(0x6007BDD4)
 I (E:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E2EB2)
 I (E:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5E8E2EB2)
-F (..\CTRL\draw.h)(0x62F270E5)()
+I (E:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E2EB2)
+F (..\CTRL\draw.h)(0x62F3B8CE)()

@@ -41,7 +41,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
     if(tim1clk%200==1) //5Hz
     {
-
+      OLED_Clear();
+      for(uint8_t i=0;i<100;i++)
+      {
+        draw_arc((uint16_t)result[i][0],(uint16_t)(result[i][1]/31.25)); //1000mm => 32 blocks
+      }
+      draw_bgd();
       OLED_Refresh_Gram();
     }
     
