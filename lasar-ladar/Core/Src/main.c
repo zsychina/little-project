@@ -48,6 +48,8 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t ReceiveByte;
+extern uint16_t distance;
+extern uint16_t result[100][2];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -114,7 +116,14 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    
+    OLED_Clear();
+    OLED_printf(0,0,"range=%4dmm",distance);
+    for(uint8_t i=0;i<100;i++)
+    {
+      draw_arc((uint16_t)result[i][0],(uint16_t)(result[i][1]/15.625)); // 500mm => 32 pixels
+    }
+    draw_bgd();
+    OLED_Refresh_Gram();    
     
   }
   /* USER CODE END 3 */

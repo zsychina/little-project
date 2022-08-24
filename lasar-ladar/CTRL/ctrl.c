@@ -41,14 +41,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     }
     if(tim1clk%50==1) //20Hz
     {
-      OLED_Clear();
-      OLED_printf(0,0,"range=%4dmm",distance);
-      for(uint8_t i=0;i<100;i++)
-      {
-        draw_arc((uint16_t)result[i][0],(uint16_t)(result[i][1]/15.625)); // 500mm => 32 pixels
-      }
-      draw_bgd();
-      OLED_Refresh_Gram();
+      // OLED_Clear();
+      // OLED_printf(0,0,"range=%4dmm",distance);
+      // for(uint8_t i=0;i<100;i++)
+      // {
+      //   draw_arc((uint16_t)result[i][0],(uint16_t)(result[i][1]/15.625)); // 500mm => 32 pixels
+      // }
+      // draw_bgd();
+      // OLED_Refresh_Gram();
     }
     
   }
