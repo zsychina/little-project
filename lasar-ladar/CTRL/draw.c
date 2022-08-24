@@ -1,7 +1,7 @@
 #include "draw.h"
 
 #define WIDTH 1 // angle
-#define LENGTH 10 // parallel lines
+#define LENGTH 5 // parallel lines
 
 int64_t abs_64(int64_t num)
 {

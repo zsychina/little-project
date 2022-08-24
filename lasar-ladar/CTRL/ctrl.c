@@ -2,10 +2,11 @@
 
 
 #define BUF_LEN 11
+#define MOTOR_STEP 5
 
 uint16_t tim1clk=0; //0~999
 uint16_t pwm_h=2500; //500~2500
-uint8_t pwm_dir=1; // 1:++ , 0:--
+uint8_t pwm_dir=0; // 1:++ , 0:--
 
 uint8_t ReceiveByte;
 uint8_t ReceiveBuff[BUF_LEN]={0};
@@ -31,10 +32,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       angle=(uint16_t)(180-(1800.0*(pwm_h/20000.0)-45.0));
       result[(uint8_t)(angle*(5.0/9))][0]=angle;
       result[(uint8_t)(angle*(5.0/9))][1]=distance;
+      if(result[(uint8_t)(angle*(5.0/9))][1]>=1000)result[(uint8_t)(angle*(5.0/9))][1]=1000;
+      if(result[(uint8_t)(angle*(5.0/9))][1]<=100)result[(uint8_t)(angle*(5.0/9))][1]=100;
     }
     if(tim1clk%20==1) //50Hz
     {     
-      if(pwm_dir==1)pwm_h+=10;else pwm_h-=10;
+      if(pwm_dir==1)pwm_h+=MOTOR_STEP;else pwm_h-=MOTOR_STEP;
       if(pwm_h<=500){pwm_h=500;pwm_dir=pwm_cvt(pwm_dir);}
       if(pwm_h>=2500){pwm_h=2500;pwm_dir=pwm_cvt(pwm_dir);}
       __HAL_TIM_SetCompare(&htim10,TIM_CHANNEL_1,pwm_h);
