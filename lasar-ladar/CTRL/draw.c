@@ -33,7 +33,6 @@ void draw_arc(uint16_t angle,uint16_t distance)
       {
         OLED_DrawPoint(x,y,1);
       }
-
     }
   }
 }

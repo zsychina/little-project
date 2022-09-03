@@ -48,6 +48,8 @@
 
 /* USER CODE BEGIN PV */
 extern uint8_t ReceiveByte;
+extern uint8_t ReceiveByte_rc;
+
 extern uint16_t distance;
 extern uint16_t result[100][2];
 /* USER CODE END PV */
@@ -96,6 +98,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_I2C1_Init();
   MX_TIM10_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start_IT(&htim1);
   HAL_TIM_Base_Start(&htim10);
@@ -103,6 +106,8 @@ int main(void)
 	HAL_TIM_Base_Start(&htim11);
   HAL_UART_Receive_IT(&huart1,&ReceiveByte,1);
   __HAL_UART_ENABLE_IT(&huart1,UART_IT_IDLE);
+  HAL_UART_Receive_IT(&huart2,&ReceiveByte_rc,1);
+  __HAL_UART_ENABLE_IT(&huart2,UART_IT_IDLE);
   
   OLED_Init();	
   /* USER CODE END 2 */
